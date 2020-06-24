@@ -1,5 +1,5 @@
 #!name=AudioMack 订阅
-#!desc=
+#!desc=AudioMack 订阅破解，去广告
 [Script]
 http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\w+$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Script/Audiomack.js
 
