@@ -608,11 +608,11 @@ function showmsg() {
      sy.msg(CookieName+" "+nick,subTitle,detail)
      }
     else if (rotaryres.status==1&&rotaryres.data.remainTurn%notifyInterval==0)    {
-   sy.msg(CookieName+" "+nick,subTitle,detail)
+   //sy.msg(CookieName+" "+nick,subTitle,detail)
       }
   else if (rotaryres.code==10010){
     rotarynum = ` 转盘${rotaryres.msg}🎉`
-   sy.msg(CookieName+" "+nick+"  "+rotarynum,subTitle,detail)
+   //sy.msg(CookieName+" "+nick+"  "+rotarynum,subTitle,detail)
       }    
     sy.log(CookieName+" "+nick+"  \n"+subTitle+detail)
 }
