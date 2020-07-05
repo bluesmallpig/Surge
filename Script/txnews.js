@@ -334,7 +334,7 @@ return new Promise((resolve, reject) => {
     } else {
     if (logs) console.log("获取收益信息" +data)
      const obj = JSON.parse(data)
-      subTile = '【收益总计】'+obj.data.wealth[0].title +'金币  '+"现金: " +obj.data.wealth[1].title+'元'
+      subTile = '【QQ账号】-【收益总计】'+obj.data.wealth[0].title +'金币  '+"现金: " +obj.data.wealth[1].title+'元'
       }
     resolve()
     })
