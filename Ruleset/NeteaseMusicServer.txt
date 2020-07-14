@@ -2,4 +2,3 @@
 节点2 = http, taron.top, 100
 节点3 = http, music.griouges.cn, 39000
 节点4 = http, lolico.me, 443
-节点5 = shadowsocks, music.desperadoj.com, 30003
