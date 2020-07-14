@@ -1,4 +1,4 @@
-节点1 = http, 106.52.127.72, 19951
-节点2 = http, taron.top, 100
-节点3 = http, music.griouges.cn, 39000
-节点4 = http, lolico.me, 443
+🎵 解锁节点1 = http, 106.52.127.72, 19951
+🎵 解锁节点2 = http, taron.top, 100
+🎵 解锁节点3 = http, music.griouges.cn, 39000
+🎵 解锁节点4 = http, lolico.me, 443
