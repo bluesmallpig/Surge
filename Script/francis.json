@@ -1,17 +1,25 @@
 {
-	"id": "francis.app.sub",
-	"name": "francis应用订阅",
-	"author": "@bluesmallpig",
-	"icon": "",
-	"repo": "https://github.com/bluesmallpig/Surge",
-	"apps": [
-			{
+  "id": "vinewx.app.sub",
+  "name": "vinewx应用订阅",
+  "author": "@vinewx",
+  "icon": "https://avatars0.githubusercontent.com/u/19585001?s=460&u= 2f5028cbd0896ebdda4efa12a8e484b56c97d424&v=4",
+  "repo": "https://ooxx.be/js",
+  "apps": [
+    		{
         			id: 'txnews',
         			name: '腾讯新闻',
         			keys: ['sy_signurl_txnews', 'sy_cookie_txnews', 'video_txnews', 'sy_signurl_txnews2', 'sy_cookie_txnews2', 'video_txnews2'],
         			author: '@Francis',
         			repo: 'https://github.com/Sunert/Scripts/blob/master/Task/txnews.js',
         			icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png', 'https://raw.githubusercontent.com/Orz-3/task/master/txnews.png']
-			}
-		]
+		},
+    		{
+      			"id": "jegotrip",
+      			"name": "无忧行",
+      			"keys": ["@JegoTrip.accountid", "@JegoTrip.mobile", "@JegoTrip.token", "@JegoTrip.userid", "@JegoTrip.taskid"],
+      			"author": "@vinewx",
+      			"repo": "https://ooxx.be/js",
+      			"icons": ["https://ooxx.be/js/icon/jegotrip-trn.png", "https://ooxx.be/js/icon/jegotrip.png"]
+    		}
+  	]
 }
