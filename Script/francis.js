@@ -1,7 +1,7 @@
 {
 	"id": "francis.app.sub",
 	"name": "francis应用订阅",
-	"author": "@francis",
+	"author": "@bluesmallpig",
 	"icon": "",
 	"repo": "https://github.com/bluesmallpig/Surge",
 	"apps": [
