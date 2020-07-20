@@ -6,7 +6,7 @@
   "repo": "https://github.com/bluesmallpig/Surge",
   "apps": [
     {
-      "id": "txnews",
+      "id": "tencentnews",
       "name": "腾讯新闻",
       "keys": [
         "sy_signurl_txnews", 
