@@ -6,33 +6,6 @@
   "repo": "https://github.com/chouchoui/QuanX",
   "apps": [
     {
-      "id": "vei.nga",
-      "name": "NGA",
-      "keys": [
-        "vei_nga_cookie",
-        "vei_nga_body"
-      ],
-      "author": "@chouchoui",
-      "repo": "https://github.com/chouchoui/QuanX/tree/master/Scripts/nga",
-      "icons": [
-        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.png",
-        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.task.png"
-      ]
-    },
-    {
-      "id": "vei.angelalign",
-      "name": "时代天使小程序",
-      "keys": [
-        "vei_angelalign_headers"
-      ],
-      "author": "@chouchoui",
-      "repo": "https://github.com/chouchoui/QuanX/tree/master/Scripts/angelalign",
-      "icons": [
-        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/angelalign/angelalign.png",
-        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/angelalign/angelalign.task.png"
-      ]
-    },
-    {
       "id": "txnews",
       "name": "腾讯新闻",
       "keys": [
