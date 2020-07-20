@@ -1,7 +1,7 @@
 {
   "id": "vei.app.sub",
-  "name": "chouchoui 应用订阅",
-  "author": "@chouchoui",
+  "name": "bluesmallpig 应用订阅",
+  "author": "@bluesmallpig",
   "icon": "https://avatars3.githubusercontent.com/u/14866249?s=460&u=40faa1309b2303e1a3d9cec8f57f05c7005256de&v=4",
   "repo": "https://github.com/chouchoui/QuanX",
   "apps": [
@@ -16,7 +16,7 @@
         "sy_cookie_txnews2", 
         "video_txnews2"
       ],
-      "author": "@Sunert",
+      "author": "@bluesmallpig",
       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
       "icons": 
       [
