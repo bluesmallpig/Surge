@@ -43,7 +43,7 @@ hostname = api.inews.qq.com
 
 Cookie获取后，请注释掉Cookie地址。
 
-*/sy_signurl_txnews2
+*/
 const cookieName = '腾讯新闻';
 const $ = new Env(cookieName);
 let notifyInterval = $.getdata('notifynum')||4; //视频红包间隔通知开为1，常关为0;
