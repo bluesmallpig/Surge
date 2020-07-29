@@ -16,6 +16,21 @@
         "sy_cookie_txnews2", 
         "video_txnews2"
       ],
+      "settings": [
+        {
+          "id": "notifynum",
+          "name": "通知频率",
+          "val": 4,
+          "type": "number",
+          "desc": "视频红包间隔通知开为1，常关为0(默认4次)"
+        },
+        {
+          "id": "logsturn",
+          "name": "调试日志",
+          "val": false,
+          "type": "boolean"
+        }
+      ],
       "author": "@Francis",
       "repo": "https://github.com/bluesmallpig/Surge/blob/master/Script/txnews.js",
       "icons": 
