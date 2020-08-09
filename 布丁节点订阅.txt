@@ -1,0 +1,17 @@
+G01 HK N1 = vmess, in.pud.ssin.xyz, 359, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:c0ea88b55a313a83ed10d71638000140.wuyiauto.com
+G01 HK N2 = vmess, in.pud.ssin.xyz, 364, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:480e8df87c6bb29069d2dc362c9caf40.wuyiauto.com
+G01 HK N3 = vmess, in.pud.ssin.xyz, 369, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:f528ff581621cdb48039028bbe1a1ec7.wuyiauto.com
+G01 HK N4 = vmess, in.pud.ssin.xyz, 374, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:133e8177665be7b8d00724dfbd7202cb.wuyiauto.com
+G01 HK N5 = vmess, in.pud.ssin.xyz, 379, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:27ce5a07974e944f0965318cc89a63ea.wuyiauto.com
+G01 HK N6 = vmess, in.pud.ssin.xyz, 384, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:c156202511d64423868a5bf861d2d25b.wuyiauto.com
+G01 HK N7 = vmess, ct02.wuyiauto.ssin.xyz, 80, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:63999ea68c0531aa1d3c46ef0c1f66cc.wuyiauto.com
+G01 TW N1 = vmess, in.pud.ssin.xyz, 394, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:157ac520cbfbe63b340d093186dce401.wuyiauto.com
+G01 TW N2 = vmess, in.pud.ssin.xyz, 399, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:b1f09bd5229397be7e13d772a7433481.wuyiauto.com
+G01 JP N1 = vmess, in.pud.ssin.xyz, 404, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:52360fddd10d9c87e62035e19279f9f0.wuyiauto.com
+G01 JP N2 = vmess, in.pud.ssin.xyz, 409, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:03260ece3a52ae4572d6542d3433a2f4.wuyiauto.com
+G01 US N1 = vmess, in.pud.ssin.xyz, 414, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:c247a3790d64c1e985a3792ccc9b5048.wuyiauto.com
+G01 US N2 = vmess, in.pud.ssin.xyz, 419, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:0cca1aa963f767a1c25edb8593668193.wuyiauto.com
+G01 SGP N1 = vmess, in.pud.ssin.xyz, 424, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:39763d30cc1c7e5159407b0190c6cee5.wuyiauto.com
+G01 SGP N2 = vmess, in.pud.ssin.xyz, 429, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:b6544f39bd4d68b49f9665967a9c56ca.wuyiauto.com
+G01 KR N1 = vmess, in.pud.ssin.xyz, 434, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:8ee98640d7b2187edfa0071086c4cf84.wuyiauto.com
+G01 KR N2 = vmess, in.pud.ssin.xyz, 439, username = b161a1cc-9ad4-33fc-b1c8-695d32f60735, ws=true, ws-path=/user, ws-headers=host:291a9b08ac885dfb941afeb271d45016.wuyiauto.com
