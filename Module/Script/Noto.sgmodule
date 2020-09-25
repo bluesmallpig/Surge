@@ -1,6 +1,5 @@
 #!name=Noto Pro
 #!desc=破解Noto笔记年订阅
-#!system=ios
 
 [Script]
 Noto.js = requires-body=1,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Script/Noto_biji.js,type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers*|receipts)
