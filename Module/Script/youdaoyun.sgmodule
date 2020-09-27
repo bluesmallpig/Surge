@@ -1,0 +1,8 @@
+
+#!name=有道云笔记VIP功能
+#!desc=破解有道云笔记订阅
+
+[Script]
+有道云笔记 = type=http-response,pattern=https://note.youdao.com/yws/(mapi/payment|api/self),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/ydybj.js,script-update-interval=0
+[MITM]
+hostname = %APPEND% note.youdao.com
