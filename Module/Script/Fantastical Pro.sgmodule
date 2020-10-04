@@ -1,6 +1,5 @@
 #!name=Fantastical Pro
 #!desc=破解Fantastical年订阅
-#!system=ios
 
 [Script]
 Fantastical.js = requires-body=1,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Script/Fantastical.js,type=http-response,pattern=^https?:\/\/api\.flexibits\.com\/v1\/account\/details/
