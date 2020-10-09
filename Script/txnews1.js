@@ -80,9 +80,9 @@ if ($.isNode()) {
         }
     })
   } else {
-                cookiesArr.push($.getdata('sy_cookie_txnews1'));
-   SignArr.push($.getdata( 'sy_signurl_txnews1'));
-      VideoArr.push($.getdata( 'video_txnews1'))
+                cookiesArr.push($.getdata('sy_cookie_txnews2'));
+   SignArr.push($.getdata( 'sy_signurl_txnews2'));
+      VideoArr.push($.getdata( 'video_txnews2'))
   }
 
 let isGetCookie = typeof $request !== 'undefined'
@@ -138,14 +138,14 @@ function GetCookie() {
     const cookieVal = $request.headers['Cookie'];
     $.log(`signurlVal:${signurlVal}`)
     $.log(`cookieVal:${cookieVal}`)
-    if (signurlVal) $.setdata(signurlVal, 'sy_signurl_txnews1')
-    if (cookieVal) $.setdata(cookieVal,  'sy_cookie_txnews1')
+    if (signurlVal) $.setdata(signurlVal, 'sy_signurl_txnews2')
+    if (cookieVal) $.setdata(cookieVal,  'sy_cookie_txnews2')
     $.msg($.name, `获取Cookie: 成功🎉`, ``)
   }
   if ($request &&$request.body.indexOf("video_read")> -1) {
     const videoVal =  $request.url
     $.log(`videoVal:${videoVal}`)
-    if (videoVal) $.setdata(videoVal,  'video_txnews1')
+    if (videoVal) $.setdata(videoVal,  'video_txnews2')
     $.msg($.name, `获取视频地址: 成功🎉`, ``)
   }
 }
