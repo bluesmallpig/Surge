@@ -1,4 +1,4 @@
-#!name=Note Pro 解锁
+#!name=Noto Pro 解锁
 #!desc=Noto 笔记 Unlock Pro
 
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers*|receipts) url script-response-body Noto_biji.js
