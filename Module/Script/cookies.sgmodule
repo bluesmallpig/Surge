@@ -13,4 +13,4 @@
 芒果TV Cookie = type=http-request,pattern=^https:\/\/credits.bz.mgtv.com\/user\/creditsTake,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js,script-update-interval=0
 喜马拉雅 Cookie = type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/homePage\/.*,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,script-update-interval=0
 [MITM]
-hostname = %APPEND% *.m.jd.com
+hostname = %APPEND% *.m.jd.com,*.iqiyi.com,api.inews.qq.com,*.video.qq.com,*.163.com,api.weibo.cn,pay.sc.weibo.com,m.weibo.cn,credits.bz.mgtv.com
