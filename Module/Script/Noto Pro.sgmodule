@@ -1,5 +1,5 @@
 #!name=Noto Pro 解锁
-#!desc=Noto 笔记 Unlock Pro
+#!desc=Noto Pro Unlock
 
 [Script]
 Noto.js = requires-body=1,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Script/Noto_biji.js,type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers*|receipts)
