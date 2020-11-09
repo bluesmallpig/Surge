@@ -278,7 +278,7 @@ function dataResults(url, checkinMsg, title) {
       }
     }
     let flowMsg = resultData == "";
-    $.msg(title, checkinMsg, flowMsg);
+    $.msg(title, checkinMsg);
   });
 }
 
