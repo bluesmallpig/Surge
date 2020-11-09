@@ -277,8 +277,8 @@ function dataResults(url, checkinMsg, title) {
         resultData = result.join("\n");
       }
     }
-    let flowMsg = resultData == "";
-    $.msg(title, checkinMsg);
+    let flowMsg = resultData == "" ? "流量信息获取失败" : resultData;
+    $.msg(title, checkinMsg, flowMsg);
   });
 }
 
