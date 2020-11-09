@@ -213,7 +213,8 @@ function checkin(url, email, password, title) {
       $.msg(title + "签到失败", JSON.stringify(error), "");
     } else {
       if (data.match(/\"msg\"\:/)) {
-        dataResults(url, JSON.parse(data).msg, title);
+	$.msg(title, JSON.parse(data).msg);
+        //dataResults(url, JSON.parse(data).msg, title);
       } else {
         login(url, email, password, title);
       }
