@@ -21,12 +21,12 @@
       ]
     },
     {
-    "id": "qqread",
+    "id": "qeread",
     "name": "企鹅读书",
     "keys": ["qqreadbd", "qqreadtimeurl", "qqreadtimehd", "qqreadbd2", "qqreadtimeurl2", "qqreadtimehd2"],
     "author": "@Francis",
     "settings": [{
-        "id": "penguindushu",
+        "id": "qeSuffix",
         "name": "当前账号",
         "val": "1",
         "type": "number",
