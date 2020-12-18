@@ -6,38 +6,43 @@
   "repo": "https://github.com/bluesmallpig/Surge",
   "apps": [
     {
-      "id": "tencentNews",
-      "name": "腾讯新闻",
+      "id": "zqkkl",
+      "name": "中青看看赚",
       "keys": [
-        "sy_signurl_txnews", 
-        "sy_cookie_txnews", 
-        "video_txnews", 
-        "sy_signurl_txnews2", 
-        "sy_cookie_txnews2", 
-        "video_txnews2"
-      ],
-      "settings": [
-        {
-          "id": "notifynum",
-          "name": "通知频率",
-          "val": 4,
-          "type": "number",
-          "desc": "视频红包间隔通知开为1，常关为0(默认4次)"
-        },
-        {
-          "id": "logsturn",
-          "name": "调试日志",
-          "val": false,
-          "type": "boolean"
-        }
+        "youth_start", 
+        "youth_end"
       ],
       "author": "@Francis",
-      "repo": "https://github.com/bluesmallpig/Surge/blob/master/Script/txnews.js",
+      "repo": "https://github.com/bluesmallpig/Action/blob/master/Task/youth_gain.js",
       "icons": 
       [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png", 
-        "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"
+        "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png", 
+        "https://raw.githubusercontent.com/Orz-3/task/master/youth.png"
       ]
-    }
+    },
+    {
+    "id": "qqread",
+    "name": "企鹅读书",
+    "keys": ["qqreadbd", "qqreadtimeurl", "qqreadtimehd", "qqreadbd2", "qqreadtimeurl2", "qqreadtimehd2"],
+    "author": "@Francis",
+    "settings": [{
+        "id": "qeSuffix",
+        "name": "当前账号",
+        "val": "1",
+        "type": "number",
+        "desc": "当前抓取ck记录的账号序号，如：1、2"
+      },
+      {
+        "id": "qeCount",
+        "name": "账号个数",
+        "val": "1",
+        "type": "number",
+        "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+      }
+    ],
+    "repo": "https://github.com/ziye12/JavaScript/blob/master/Task/qqreads.js",
+    "icons": ["https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.jpg", "https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.jpg"],
+    "script": "https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js"
+  }
   ]
 }
