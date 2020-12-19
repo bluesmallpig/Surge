@@ -13,7 +13,7 @@
         "youth_end"
       ],
       "author": "@Francis",
-      "repo": "https://github.com/Sunert/Scripts/blob/master/Task/youth_gain.js",
+      "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth_gain.js",
       "icons": 
       [
         "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png", 
@@ -28,7 +28,7 @@
         "youth_kkz_end"
       ],
       "author": "@Francis",
-      "repo": "https://github.com/bluesmallpig/Action/blob/master/Task/youth_kkz.js",
+      "script": "https://raw.githubusercontent.com/bluesmallpig/Action/master/Task/youth_kkz.js",
       "icons": 
       [
         "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png", 
