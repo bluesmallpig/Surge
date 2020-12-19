@@ -6,14 +6,29 @@
   "repo": "https://github.com/bluesmallpig/Surge",
   "apps": [
     {
-      "id": "zqkkl",
-      "name": "中青看看赚",
+      "id": "zqllz",
+      "name": "中青浏览赚",
       "keys": [
         "youth_start", 
         "youth_end"
       ],
       "author": "@Francis",
       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/youth_gain.js",
+      "icons": 
+      [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png", 
+        "https://raw.githubusercontent.com/Orz-3/task/master/youth.png"
+      ]
+    },
+    {
+      "id": "zqkkz",
+      "name": "中青看看赚",
+      "keys": [
+        "youth_kkz_start", 
+        "youth_kkz_end"
+      ],
+      "author": "@Francis",
+      "repo": "https://github.com/bluesmallpig/Action/blob/master/Task/youth_kkz.js",
       "icons": 
       [
         "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png", 
