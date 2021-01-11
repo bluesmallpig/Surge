@@ -5,7 +5,7 @@ github：https://github.com/ZhiYi-N/script
 转载给我留个名字，谢谢
 
 
-邀请码：1980436898
+邀请码：DHXCXGX9
 我的--输入邀请码，立得一元，直接提现，谢谢
 
 作者：执意ZhiYi-N
@@ -353,7 +353,7 @@ return new Promise((resolve, reject) => {
     url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/invite/post_invite_code/?_request_from=web&device_platform=ios&ac=4G&${signurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
-    body: JSON.stringify({"invitecode" : "1980436898"})
+    body: JSON.stringify({"invitecode" : "DHXCXGX9"})
 }
 
    $.post(invitatonurl,(error, response, data) =>{
