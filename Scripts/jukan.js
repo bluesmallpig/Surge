@@ -20,8 +20,8 @@ cron "0,30 7-22/1 * * *" script-path=https://raw.githubusercontent.com/shylocks/
 
 ===============Surge=================
 [Script]
-聚看点 = type=http-request,pattern=https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action ,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jkd.js
-聚看点 = type=cron,cronexp="0,30 7-22/1 * * *",wake-system=1,timeout=900,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jkd.js
+聚看点 = type=http-request,pattern=https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action ,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/jukan.js
+聚看点 = type=cron,cronexp="0,30 7-22/1 * * *",wake-system=1,timeout=900,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/jukan.js
 
 ===============MITM=================
 [MITM]
