@@ -429,6 +429,7 @@ await dkdsxzp()
 await dkdcj()
 await dkdfx()
 await dkdxs()
+await dkddjs()
 await dkdsdjl()
 await dkdxx()
 await dkdz()
@@ -445,6 +446,25 @@ await dkdtx()
     },timeout)
   })
 }
+
+function dkddjs(timeout = 0) {
+    return new Promise((resolve) => {
+  let url = {
+          url : 'http://dkd-api.dysdk.com/video/extra_time',
+          headers : JSON.parse($.getdata('dkdhd')),
+          body : dkdbody,}
+        $.post(url, async (err, resp, data) => {
+          try {
+             //$.log(dkdbody)
+      const result = JSON.parse(data)
+          } catch (e) {
+            //$.logErr(e, resp);
+          } finally {
+            resolve()
+          }
+      },timeout)
+    })
+  }
 
 //多看点用户信息     
 function dkdxx(timeout = 0) {
