@@ -20,26 +20,25 @@ body一天左右过期，可以不用关闭芝嫲视频的重写。
 #圈X配置
 [task_local]
 #芝嫲视频
-15 50 3 * * * https://raw.githubusercontent.com/age174/-/main/zmsp.js, tag=芝嫲视频, img-url=https://s3.ax1x.com/2021/02/06/yYzeWn.png, enabled=true
+15 50 3 * * * https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/zmsp.js, tag=芝嫲视频, img-url=https://s3.ax1x.com/2021/02/06/yYzeWn.png, enabled=true
 
 [rewrite_local]
 #芝麻视频
-^https://api.sxsjyzm.com/api2/loot/index url script-request-body https://raw.githubusercontent.com/age174/-/main/zmsp.js
+^https://api.sxsjyzm.com/api2/loot/index url script-request-body https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/zmsp.js
 
 
 #loon配置
-^https://api.sxsjyzm.com/api2/loot/index script-path=https://raw.githubusercontent.com/age174/-/main/zmsp.js, requires-body=true, timeout=10, tag=芝嫲视频
+^https://api.sxsjyzm.com/api2/loot/index script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/zmsp.js, requires-body=true, timeout=10, tag=芝嫲视频
 
 
 #surge配置
-芝嫲视频 = type=http-request,pattern=^https://api.sxsjyzm.com/api2/loot/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/age174/-/main/zmsp.js,script-update-interval=0
+芝嫲视频 = type=http-request,pattern=^https://api.sxsjyzm.com/api2/loot/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/zmsp.js,script-update-interval=0
 
 #shadowrockets(小火箭)
-芝嫲视频 = type=http-request,pattern=^https://api.sxsjyzm.com/api2/loot/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/age174/-/main/zmsp.js,script-update-interval=0
+芝嫲视频 = type=http-request,pattern=^https://api.sxsjyzm.com/api2/loot/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/zmsp.js,script-update-interval=0
 
 [MITM]
 hostname = api.sxsjyzm.com
-
 
 */
 const $ = new Env('芝麻视频晶石收取');
