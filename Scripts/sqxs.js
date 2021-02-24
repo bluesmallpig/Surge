@@ -97,8 +97,8 @@ function readbook() {
   
   const request = {
       url: url,
-      headers: JSON.parse(readckArr[1]),
-      body: readckArr[0]
+      headers: JSON.parse(vediogoldprizeckArr[1]),
+      body: vediogoldprizeckArr[0]
   };
 	$.post(request, async(error, request, data) =>{
       try {
