@@ -1,6 +1,29 @@
-/*书旗小说 author：caixukun
-hostname：ocean.shuqireader.com,
+/*
+脚本名称："书旗小说多账户号稳定版";
+适用版本：verson 4.3.2或者4.3.3 ;
+作者：caixukun;
 
+
+【注意事项】：
+0.所有js脚本均为本地脚本，非远程目录。
+
+1.有时候会出现获取不到ck的情况，请关闭代理重复该步骤多试几次；
+
+2.看视频金币ck获取可能会出现视频加载失败，可以先关闭qx，待视频能看再打开qx;
+
+3.运行次数大概一天，一到两次，日收益5毛左右；
+
+4.阅读任务可能会出现中断，读者可自行更改间隔时间；
+
+5.所有ck获取完成，可以打开boxjs看看书否所有的参数都有值，不要出现账号1的ack和账号2的bck混合在一起；
+
+
+【nodejs教程】：
+打开boxjs，复制会话，新建文件，粘贴，改文件名为 sqxsck.json,与本脚本放同一目录下，用nodejs即可运行本脚本；
+
+
+【QX教程】：
+hostname：ocean.shuqireader.com
 
 [rewrite_local]
 https://ocean.shuqireader.com/api/ad/v1/api/prize/lottery url script-request-body sqxsgetck.js
@@ -8,8 +31,6 @@ https://ocean.shuqireader.com/api/activity/activity/v1/lottery/draw url script-r
 https://ocean.shuqireader.com/api/activity/xapi/gold/record url script-request-body sqxsgetck.js
 https://ocean.shuqireader.com/api/prizecenter/xapi/prize/manual/receive url script-request-body sqxsgetck.js
 https://ocean.shuqireader.com/api/ad/v1/api/prize/readpage/pendant/lottery url script-request-body sqxsgetck.js
-
-
 
 [task_local]
 0 12 * * * sqxs.js, tag=书旗小说, enabled=true
@@ -27,7 +48,6 @@ boxjs：https://raw.githubusercontent.com/xiaokxiansheng/js/master/Task/cxk10.bo
 
 5 点击 我的-去赚钱-记录,获得 用户信息url;
 
-打开boxjs看看书否所有的参数都有值；
 
 
 */
@@ -44,23 +64,8 @@ let vediogold=0;
 let drawgold=0;
 
 
-
-
-readckArr = $.getdata('readck').split('&&');
-
-receivecoinckArr = $.getdata('receivecoinck').split('&&');
-
-vediogoldprizeckArr= $.getdata('vediogoldprizeck').split('&&');
-
-vediodrawprizeckArr= $.getdata('vediodrawprizeck').split('&&');
-
-
-drawckArr= $.getdata('drawck').split('&&');
-
-userinfock=$.getdata('userinfock');
-
 !(async () => {
-	  await all(); 
+	await all(); 
 })()
     .catch((e) => {
       $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
@@ -68,25 +73,100 @@ userinfock=$.getdata('userinfock');
     .finally(() => {
       $.done();
     })
- 
-async function all() {	
 
 
-	//阅读
-	await readbook();	
+
+
+
+
+
+
+
+async function all() 
+{	
+	//nodejs运行
+	if ($.isNode()) 
+	{
+
+		let sqxsck = require('./sqxsck.json');
+		let CountNumber =sqxsck.settings[1].val;
+		$.log(`============ 共 ${CountNumber} 个${jobname}账号=============`);
+		for (let i = 0; i < CountNumber; i++) 
+		{
+			if (sqxsck.datas[0+6*i].val)
+			{
+				readckArr=sqxsck.datas[0+6*i].val.split('&&');
+				receivecoinckArr = sqxsck.datas[1+6*i].val.split('&&');
+				vediogoldprizeckArr=sqxsck.datas[2+6*i].val.split('&&');
+				vediodrawprizeckArr= sqxsck.datas[3+6*i].val.split('&&');
+				drawckArr= sqxsck.datas[4+6*i].val.split('&&');
+				userinfock=sqxsck.datas[5+6*i].val;
+				
+				$.log(`\n============ 【书旗小说${i+1}】=============`);
+				ReadTimes=0;
+				vediogold=0;
+				drawgold=0;
+							
+				//阅读
+				await readbook();	
+				
+				//收集阅读金币
+				//if(ReadTimes>0)
+				await receivecoin();
+				
+				//看视频奖励金币
+				await vediogoldprize(0);
+				
+				//看视频奖励抽奖次数
+				await vediodrawprize(0);
+				
+				//个人信息
+				await userinfo();
+			}		
+		}
+		
+		
+	}
+	//QX运行
+	else
+	{
+		
+		let CountNumber =$.getval('CountNumber');
+		$.log(`============ 共 ${CountNumber} 个${jobname}账号=============`);
 	
-	//收集阅读金币
-	//if(ReadTimes>0)
-	await receivecoin();
-	
-	//看视频奖励金币
-	await vediogoldprize(0);
-	
-	//看视频奖励抽奖次数
-	await vediodrawprize(0);
-	
-	//个人信息
-	await userinfo();
+		for (let i = 1; i <= CountNumber; i++) 
+		{
+			if ($.getdata(`readck${i}`)) 
+			{	
+				readckArr = $.getdata(`readck${i}`).split('&&');
+				receivecoinckArr = $.getdata(`receivecoinck${i}`).split('&&');
+				vediogoldprizeckArr= $.getdata(`vediogoldprizeck${i}`).split('&&');
+				vediodrawprizeckArr= $.getdata(`vediodrawprizeck${i}`).split('&&');
+				drawckArr= $.getdata(`drawck${i}`).split('&&');
+				userinfock=$.getdata(`userinfock${i}`);    
+				$.log('\n============ 【书旗小说'+i+'】=============');
+				ReadTimes=0;
+				vediogold=0;
+				drawgold=0;
+				//阅读
+				await readbook();	
+				
+				//收集阅读金币
+				//if(ReadTimes>0)
+				await receivecoin();
+				
+				//看视频奖励金币
+				await vediogoldprize(0);
+				
+				//看视频奖励抽奖次数
+				await vediodrawprize(0);
+				
+				//个人信息
+				await userinfo();
+			}
+		}
+		
+	}
 }  
   
 
@@ -113,8 +193,8 @@ function readbook() {
 		}
 		 else
 		 {	 
-			 $.log("【阅读任务】阅读失败");	
-			 $.log(data);			 
+			 $.log("【阅读任务】阅读失败，"+result.message);	
+			 //$.log(data);			 
 		 }
 		 
       } catch(e) {
@@ -146,8 +226,8 @@ function receivecoin() {
 		}
 		 else
 		 {	 
-			 $.log("【收集金币】收集阅读金币失败");
-             $.log(data);			 
+			 $.log("【收集金币】收集阅读金币失败,"+result.message);
+             //$.log(data);			 
 		 }
 		 
       } catch(e) {
@@ -180,8 +260,8 @@ function vediogoldprize(j) {
 		}
 		 else
 		 {	 
-			 $.log("【视频金币】观看失败");
-			 $.log(data);
+			 $.log("【视频金币】观看失败,"+result.message);
+			 //$.log(data);
 			 
 		 }
       } catch(e) {
@@ -215,8 +295,8 @@ function vediodrawprize(k) {
 		}
 		 else
 		 {	 
-			 $.log("【视频抽奖】观看失败，");
-			 $.log(data);
+			 $.log("【视频抽奖】观看失败,"+result.message);
+			 //$.log(data);
 		 }
       } catch(e) {
 			$.log(e)
@@ -248,8 +328,8 @@ function draw(k) {
 		}
 		 else
 		 {	 
-			 $.log("【抽奖任务】抽奖失败");
-			 $.log(data);
+			 $.log("【抽奖任务】抽奖失败,"+result.message);
+			 //$.log(data);
 		 }
       } catch(e) {
 			$.log(e)
@@ -285,8 +365,8 @@ function userinfo() {
 		}
 		 else
 		 {	 
-			 $.log("【金币总数】数据异常");
-             $.log(data);			 
+			 $.log("【金币总数】数据异常,"+result.message);
+             //$.log(data);			 
 		 }
 		 
       } catch(e) {
