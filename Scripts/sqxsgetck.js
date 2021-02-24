@@ -1,5 +1,6 @@
 
 const $ = new Env('书旗小说获取ck')
+$.idx =$.getval('sqxs');
 var url = $request.url;
 
 if(url.indexOf('/ad/v1/api/prize/readpage/pendant/lottery')!=-1)
@@ -8,9 +9,10 @@ if(url.indexOf('/ad/v1/api/prize/readpage/pendant/lottery')!=-1)
 	var headers = $request.headers;
 	if(body&&headers)
 	{
-		$.msg('获取阅读ck成功(共6个ck)');
+		$.msg('书旗小说'+ $.idx,'获取阅读ck成功(共6个ck)');
+
 		let readck=body+'&&'+JSON.stringify(headers);
-		$.setdata(readck ,'readck')	
+		$.setdata(readck ,'readck'+ $.idx)	
 	}		
 }
 if(url.indexOf('/prizecenter/xapi/prize/manual/receive')!=-1)
@@ -19,9 +21,9 @@ if(url.indexOf('/prizecenter/xapi/prize/manual/receive')!=-1)
 	var headers = $request.headers;
 	if(body&&headers)
 	{
-		$.msg('获取收集金币ck成功(共6个ck)');
+		$.msg('书旗小说'+ $.idx,'获取收集金币ck成功(共6个ck)');
 		let receivecoinck=body+'&&'+JSON.stringify(headers);
-		$.setdata(receivecoinck ,'receivecoinck')	
+		$.setdata(receivecoinck ,'receivecoinck'+ $.idx)	
 	}		
 }
 if(url.indexOf('/ad/v1/api/prize/lottery')!=-1)
@@ -30,15 +32,15 @@ if(url.indexOf('/ad/v1/api/prize/lottery')!=-1)
 	var headers = $request.headers;
 	if(body.indexOf('deliveryId=525')!=-1&&headers)
 	{
-		$.msg('获取视频金币奖励ck成功(共6个ck)');
+		$.msg('书旗小说'+ $.idx,'获取视频金币奖励ck成功(共6个ck)');
 		let vediogoldprizeck=body+'&&'+JSON.stringify(headers);
-		$.setdata(vediogoldprizeck ,'vediogoldprizeck')	
+		$.setdata(vediogoldprizeck ,'vediogoldprizeck'+ $.idx)	
 	}		
 	if(body.indexOf('deliveryId=711')!=-1&&headers)
 	{
-		$.msg('获取视频抽奖奖励ck成功(共6个ck)');
+		$.msg('书旗小说'+ $.idx,'获取视频抽奖奖励ck成功(共6个ck)');
 		let vediodrawprizeck=body+'&&'+JSON.stringify(headers);
-		$.setdata(vediodrawprizeck ,'vediodrawprizeck')	
+		$.setdata(vediodrawprizeck ,'vediodrawprizeck'+ $.idx)	
 	}	
 }
 
@@ -48,9 +50,9 @@ if(url.indexOf('activity/activity/v1/lottery/draw')!=-1)
 	var headers = $request.headers;
 	if(body&&headers)
 	{
-		$.msg('获取抽奖ck成功(共6个ck)');
+		$.msg('书旗小说'+ $.idx,'获取抽奖ck成功(共6个ck)');
 		let drawck=body+'&&'+JSON.stringify(headers);
-		$.setdata(drawck ,'drawck')	
+		$.setdata(drawck ,'drawck'+ $.idx)	
 	}		
 }
 if(url.indexOf('activity/xapi/gold/record')!=-1)
@@ -59,9 +61,9 @@ if(url.indexOf('activity/xapi/gold/record')!=-1)
 	
 	if(url)
 	{
-		$.msg('获取用户信息url成功(共6个ck)');
+		$.msg('书旗小说'+ $.idx,'获取用户信息url成功(共6个ck)');
 		let userinfock=url;
-		$.setdata(userinfock ,'userinfock')	
+		$.setdata(userinfock ,'userinfock'+ $.idx)	
 	}		
 }
 $.done();  
