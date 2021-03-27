@@ -328,7 +328,7 @@ let new_time = Math.round(new Date().getTime()/1000).toString();
         if(ads){
         adtoken = ads.ad_task.token
         console.log('🎈'+'获取成功，广告token='+adtoken)
-        await ad();
+        //await ad();
         }
         signtoken = sign.check_in_task.token
         console.log('🎈'+'获取成功，签到token='+signtoken)
