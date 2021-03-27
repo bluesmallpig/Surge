@@ -146,8 +146,8 @@ if (!hsheaderArr[0] && !hsbodyArr[0] && !hsurlArr[0]) {
       playbody = playbodyArr[i];
       $.index = i + 1;
       console.log(`\n开始【抖音火山版${$.index}】`)
-      await ck()
-      await app_alert_check()
+      //await ck()
+      //await app_alert_check()
       await device_register()
       await userinfo()
       await gettoken()
