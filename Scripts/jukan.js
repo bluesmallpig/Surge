@@ -20,8 +20,8 @@ cron "0,30 7-22/1 * * *" script-path=https://raw.githubusercontent.com/shylocks/
 
 ===============Surge=================
 [Script]
-聚看点 = type=http-request,pattern=https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action ,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/jukan.js
-聚看点 = type=cron,cronexp="0,30 7-22/1 * * *",wake-system=1,timeout=900,script-path=https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/jukan.js
+聚看点 = type=http-request,pattern=https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action ,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jkd.js
+聚看点 = type=cron,cronexp="0,30 7-22/1 * * *",wake-system=1,timeout=900,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jkd.js
 
 ===============MITM=================
 [MITM]
@@ -34,8 +34,9 @@ let liveBody = null
 const $ = new Env("聚看点")
 let sum = 0
 let cookiesArr = [
-  'xz_jkd_appkey=2d37fc0b429c4bbdabbaa912a9ad9486!iOS!5.6.5', // xz_jkd_appkey=xxx; JSESSIONID=xxx; UM_distinctid=xxx; （账号1ck）
-  'xz_jkd_appkey=255fe7ab5dde47959a42410ae41e9f21!iOS!5.6.5', // xz_jkd_appkey=xxx; JSESSIONID=xxx; UM_distinctid=xxx; （账号2ck）
+'JSESSIONID=FAD1DD6C9861B647AB65F2C5E0DB72F5; SERVERID=18d4c625632a6d18d7fffb33bff74b74|1611911465|1611911464; xz_jkd_appkey=8d4f9653e771438da045bea375030940!iOS!5.6.5',
+'JSESSIONID=2D75C8E21D93EE55DEEB9C4D609D550A; SERVERID=18d4c625632a6d18d7fffb33bff74b74|1614074844|1614074843; xz_jkd_appkey=d26f3e89e618474da0f57ce51d46b278!iOS!5.6.5',
+'xz_jkd_appkey=255fe7ab5dde47959a42410ae41e9f21!iOS!5.6.5',
 ], cookie = '', message;
 let notify = !$.isNode()?$.getdata("JKD_MSG"):true
 async function getCookie() {
