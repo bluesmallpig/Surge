@@ -151,7 +151,7 @@ if (!hsheaderArr[0] && !hsbodyArr[0] && !hsurlArr[0]) {
       await device_register()
       await userinfo()
       await gettoken()
-      //await sign_in()
+      await sign_in()
       //await ad()
       // await hotsoonfeed()
       // await control()
