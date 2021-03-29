@@ -332,14 +332,10 @@ async function all() {
 
 
         if (CASH >= 1000) {
-            A = Date.now()
-            B = Date.now() + CASH
-            C= daytime()+86400000
-            while (Date.now() <= B) {
-              if (Date.now() >= C&&Date.now() <= C+3) {
-                CASH = 50
-                 await tixian()
-             }
+            CASH = 50
+            for(var i=0; i<2; i++) {
+              tixian()
+            }
          }
 
         } else {
