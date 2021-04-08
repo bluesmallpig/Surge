@@ -1,1 +1,1 @@
-http=192.168.1.151:8101, fast-open=false, udp-relay=false, tag=⚙️V2P
+http=192.168.1.249:6152, fast-open=false, udp-relay=false, tag=snell
