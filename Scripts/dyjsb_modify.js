@@ -224,6 +224,7 @@ if (!signheaderArr[0]) {
       //await step_reward();
       await watch_video()
       await treasure()
+      //await watch_ad()
       await control()
       //await profit()
       await showmsg()
@@ -421,7 +422,6 @@ function treasure() {
            message += '📣开宝箱\n'
           if(result.err_no == 0) {
               message +='🎉'+result.err_tips+'获得:'+result.data.amount+"\n"
-	      await watch_ad()
             }
           else if(result.err_no == 10006){
               message += '⚠️异常:已打开过了，稍后再试\n'
