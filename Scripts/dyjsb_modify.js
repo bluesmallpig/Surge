@@ -56,6 +56,12 @@ let stepkey = $.getdata('stepkey')
 let readheader = $.getdata('readheader')
 let readkey = $.getdata('readkey')
 
+let treasureheader = $.getdata('treasureheader')
+let treasurekey = $.getdata('treasurekey')
+
+let excitation_adheader = $.getdata('excitation_adheader')
+let excitation_adkey = $.getdata('excitation_adkey')
+
 let dyhost = $.getdata('dyhost')
 let dyjsbaccount;
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
