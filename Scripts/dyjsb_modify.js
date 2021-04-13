@@ -224,7 +224,7 @@ if (!signheaderArr[0]) {
       //await step_reward();
       await watch_video()
       await treasure()
-      //await watch_ad()
+      await watch_ad()
       await control()
       //await profit()
       await showmsg()
@@ -452,7 +452,7 @@ function treasure() {
                   message +='🎉'+result.err_tips+'获得:'+result.data.amount+"\n"
                 }
               else if(result.err_no == 10006){
-                  message += '⚠️异常:已经看过了\n'
+                  message += '⚠️异常:今日看广告领音符已达到上限，休息一下~明天再来看吧\n'
               }
               else{
                   message += '⚠️异常:'+result.err_tips+'\n'+'请重新获取excitation_adkey\n'
