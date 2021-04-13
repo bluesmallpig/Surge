@@ -402,11 +402,11 @@ function treasure() {
         message += '🎉' + result.err_tips + '获得:' + result.data.amount + "\n"
       }
       else if (result.err_no == 10006) {
-        message += '⚠️异常:已打开过了，稍后再试\n'
+        message += '友情提示: 已打开过了，稍后再试\n'
       }
       else {
-        message += '⚠️异常:' + result.err_tips + '\n' + '请重新获取treasurekey\n'
-        let other = '⚠️异常:' + result.err_tips + '请重新获取treasurekey\n'
+        message += '友情提示: ' + result.err_tips + '\n' + '请重新获取treasurekey\n'
+        let other = '友情提示: ' + result.err_tips + '请重新获取treasurekey\n'
         $.msg(jsname, '', other)
       }
       resolve()
