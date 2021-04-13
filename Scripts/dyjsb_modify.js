@@ -1,10 +1,7 @@
 /*
-github：https://github.com/Ariszy/script
-boxjs：https://raw.githubusercontent.com/Ariszy/Private-Script/master/Ariszy.boxjs.json
 转载留个名字，谢谢
-邀请码：8025524531
-我的--输入邀请码，立得一元，直接提现，谢谢
 作者：执意Ariszy
+改版！改版！改版！
 目前包含：
 签到
 修改步数，获取金币
@@ -17,28 +14,11 @@ boxjs：https://raw.githubusercontent.com/Ariszy/Private-Script/master/Ariszy.bo
 hostname = *.amemv.com
 #圈x
 [rewrite local]
-luckycat/aweme/v1/task/sign_in/detail? url script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js
-
-luckycat/aweme/v1/task/done/read? url script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js
-
-luckycat/aweme/v1/task/done/treasure_task? url script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js
-
-luckycat/aweme/v1/task/walk/step_submit? - script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js
-
-#loon
-http-request /luckycat/aweme/v1/task/sign_in/detail? script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js, requires-body=true, timeout=10, tag=抖音极速版sign
-
-http-request /luckycat/aweme/v1/task/done/read? script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js, requires-body=true, timeout=10, tag=抖音极速版read
-
-http-request /luckycat/aweme/v1/task/walk/step_submit? script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js, requires-body=true, timeout=10, tag=抖音极速版step
-
-#surge
-dyjsbsign = type=http-request,pattern=/luckycat/aweme/v1/task/sign_in/detail?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js,script-update-interval=0
-
-dyjsbread = type=http-request,pattern=/luckycat/aweme/v1/task/done/read?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js,script-update-interval=0
-
-dyjsbstep = type=http-request,pattern=/luckycat/aweme/v1/task/walk/step_submit?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/dyjsb.js,script-update-interval=0
-
+luckycat/aweme/v1/task/sign_in/detail? url script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
+luckycat/aweme/v1/task/done/read? url script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
+luckycat/aweme/v1/task/done/treasure_task? url script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
+luckycat/aweme/v1/task/done/excitation_ad_treasure_box? url script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
+luckycat/aweme/v1/task/walk/step_submit? - script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
 */
 const jsname = '抖音极速版'
 const $ = Env(jsname)
