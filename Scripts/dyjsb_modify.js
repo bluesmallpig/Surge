@@ -414,7 +414,7 @@ function treasure() {
   })
 }
 
-//看广告
+//看宝箱广告
 function watch_ad() {
   const method = `POST`;
   const body = `{
@@ -436,10 +436,10 @@ function watch_ad() {
       if (result.err_no == 0) {
         message += '🎉' + result.err_tips + '获得:' + result.data.amount + "\n"
       } else if (result.err_no == 10006) {
-        message += '⚠️异常:今日看广告领音符已达到上限，休息一下~明天再来看吧\n'
+        message += '友情提示: 今日看广告领音符已达到上限，休息一下~明天再来看吧\n'
       } else {
-        message += '⚠️异常:' + result.err_tips + '\n' + '请重新获取excitation_adkey\n'
-        let other = '⚠️异常:' + result.err_tips + '请重新获取excitation_adkey\n'
+        message += '友情提示: ' + result.err_tips + '\n' + '请重新获取excitation_adkey\n'
+        let other = '友情提示: ' + result.err_tips + '请重新获取excitation_adkey\n'
         $.msg(jsname, '', other)
       }
       resolve()
