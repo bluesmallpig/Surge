@@ -410,7 +410,7 @@ return new Promise((resolve, reject) => {
 function treasure() {
     return new Promise((resolve, reject) => {
       let watch_adurl ={
-        url: `https://api5-normal-c-hl.amemv.com/luckycat/aweme/v1/task/done/treasure_task?${treasureheader}`,
+        url: `https://${dyhost}/luckycat/aweme/v1/task/done/treasure_task?${treasureheader}`,
         headers: JSON.parse(treasurekey),
         body: `{
       "in_sp_time" : 0
@@ -439,7 +439,7 @@ function treasure() {
       function watch_ad() {
         return new Promise((resolve, reject) => {
           let excitation_adurl ={
-            url: `https://${dyhost}/luckycat/aweme/v1/task/done/excitation_ad_treasure_box?${excitation_adheader}`,
+            url: `https://api5-normal-c-hl.amemv.com/luckycat/aweme/v1/task/done/excitation_ad_treasure_box?${excitation_adheader}`,
             headers: JSON.parse(excitation_adkey),
             body: `{
         }`
