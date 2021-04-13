@@ -423,7 +423,7 @@ function watch_ad() {
 
   return new Promise((resolve, reject) => {
     const excitation_adurl = {
-      url: `https://${dyhost}/luckycat/aweme/v1/task/done/treasure_task?${excitation_adheader}`,
+      url: `https://${dyhost}/luckycat/aweme/v1/task/done/excitation_ad_treasure_box?${excitation_adheader}`,
       method: method,
       headers: JSON.parse(excitation_adkey),
       body: body
