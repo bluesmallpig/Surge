@@ -219,7 +219,7 @@ if (!signheaderArr[0]) {
       console.log(`\n开始【抖音极速版${$.index}】`)
       //await invite()
       await sign_in()
-      //await withdraw()
+      await withdraw()
       //await step_submit();
       //await step_reward();
       await watch_video()
