@@ -442,6 +442,7 @@ function treasure() {
             url: `https://api5-normal-c-hl.amemv.com/luckycat/aweme/v1/task/done/excitation_ad_treasure_box?${excitation_adheader}`,
             headers: JSON.parse(excitation_adkey),
             body: `{
+            "in_sp_time" : 0
         }`
         }
            $.post(excitation_adurl,(error, response, data) =>{
