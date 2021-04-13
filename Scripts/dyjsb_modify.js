@@ -417,9 +417,7 @@ function treasure() {
 //看宝箱广告
 function watch_ad() {
   const method = `POST`;
-  const body = `{
-    "in_sp_time" : 0
-  }`;
+  const body = ``;
 
   return new Promise((resolve, reject) => {
     const excitation_adurl = {
