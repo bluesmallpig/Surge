@@ -18,6 +18,7 @@ luckycat/aweme/v1/task/sign_in/detail? url script-request-header https://raw.git
 luckycat/aweme/v1/task/done/read? url script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
 luckycat/aweme/v1/task/done/treasure_task? url script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
 luckycat/aweme/v1/task/done/excitation_ad_treasure_box? url script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
+luckycat/aweme/v1/task/done/excitation_ad? url script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
 luckycat/aweme/v1/task/walk/step_submit? - script-request-header https://raw.githubusercontent.com/bluesmallpig/Surge/master/Scripts/dyjsb_modify.js
 */
 const jsname = '抖音极速版'
@@ -41,6 +42,9 @@ let treasurekey = $.getdata('treasurekey')
 
 let excitation_adheader = $.getdata('excitation_adheader')
 let excitation_adkey = $.getdata('excitation_adkey')
+
+let douyin_adheader = $.getdata('douyin_adheader');
+let douyin_adkey = $.getdata('douyin_adkey');
 
 let dyhost = $.getdata('dyhost')
 let dyjsbaccount;
@@ -203,6 +207,7 @@ if ($.isNode()) {
       //await step_submit();
       //await step_reward();
       await watch_video()
+      await douyin_ad()
       await treasure()
       await watch_ad()
       await control()
@@ -267,6 +272,18 @@ function GetCookie() {
     $.log(`[${jsname}] 获取excitation_ad请求: 成功,excitation_adkey: ${excitation_adkey}`)
     $.msg(`获取excitation_adkey: 成功🎉`, ``)
   }
+
+  if ($request && $request.url.indexOf("aweme" && "done/excitation_ad") >= 0 && $request.url.indexOf("treasure_box")<0) {
+    const douyin_adheader = $request.url.split(`?`)[1]
+    if (douyin_adheader) $.setdata(douyin_adheader, `douyin_adheader${$.idx}`)
+    $.log(`[${jsname}] 获取douyin_ad请求: 成功,douyin_adheader: ${douyin_adheader}`)
+    $.msg(`douyin_adheader: 成功🎉`, ``)
+    const douyin_adkey = JSON.stringify($request.headers)
+    if (douyin_adkey) $.setdata(douyin_adkey, `douyin_adkey${$.idx}`)
+    $.log(`[${jsname}] 获取douyin_ad请求: 成功,douyin_adkey: ${douyin_adkey}`)
+    $.msg(`获取douyin_adkey: 成功🎉`, ``)
+  }
+
 }
 async function control() {
   if (stepheader && hour == 12 && minute <= 30) {
@@ -444,6 +461,37 @@ function watch_ad() {
     })
   })
 }
+
+//看广告赚音符
+function douyin_ad() {
+    const method = `POST`;
+    const body = ``;
+  
+    return new Promise((resolve, reject) => {
+      const douyin_adurl = {
+        url: `https://${dyhost}/luckycat/aweme/v1/task/done/excitation_ad?${douyin_adheader}`,
+        method: method,
+        headers: JSON.parse(douyin_adkey),
+        body: body
+      }
+      
+      $.post(douyin_adurl, (error, response, data) => {
+        const result = JSON.parse(data)
+        if (logs) $.log("看广告赚音符返回：" + data)
+        message += '📣看广告赚音符\n'
+        if (result.err_no == 0) {
+          message += '🎉' + result.err_tips + '获得:' + result.data.amount + "\n"
+        } else if (result.err_no == 10006) {
+          message += '友情提示: 广告视频准备中，请稍后再试！\n'
+        } else {
+          message += '友情提示: ' + result.err_tips + '\n' + '请重新获取douyin_adkey\n'
+          let other = '友情提示: ' + result.err_tips + '请重新获取douyin_adkey\n'
+          $.msg(jsname, '', other)
+        }
+        resolve()
+      })
+    })
+  }
 
 function invitation() {
   return new Promise((resolve, reject) => {
