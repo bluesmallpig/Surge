@@ -117,7 +117,7 @@ function hlyylb(timeout = 0) {
 ut = hlyyurl.match(/ut=(.*)/)[1]
 id = hlyyurl.match(/deviceId=(.+?)&/)[1]
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/getTaskList?av=1.1.3&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/getTaskList?av=1.1.71&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.get(url, async (err, resp, data) => {
@@ -155,7 +155,7 @@ console.log('葫芦音乐获取用户信息失败 已停止当前账号运行!')
 function hlyyqd(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${qd}&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${qd}&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -185,7 +185,7 @@ let url = {
 function hlyyqdfb(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${qdfb}&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${qdfb}&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -216,7 +216,7 @@ let url = {
 function hlyygg(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${gg}&tl=10000&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${gg}&tl=10000&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -251,7 +251,7 @@ await hlyyggpj()
 function hlyyggpj(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${gg}&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${gg}&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -281,7 +281,7 @@ let url = {
 function hlyysp(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${sp}&tl=10000&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${sp}&tl=10000&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -313,7 +313,7 @@ let url = {
 function hlyyfx(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${fx}&tl=10000&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${fx}&tl=10000&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -344,7 +344,7 @@ let url = {
 function hlyyfxpj(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${fx}&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${fx}&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -374,7 +374,7 @@ let url = {
 function hlyytg(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${tg}&tl=10000&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${tg}&tl=10000&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -404,7 +404,7 @@ let url = {
 function hlyytgfb(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&deviceId=${id}&os=ios&tc=${tgfb}&tl=10000&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&deviceId=${id}&os=ios&tc=${tgfb}&tl=10000&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -496,7 +496,7 @@ wz = result.data.pagelist[0].code
 function hlyyzs(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&bc=${wz}&deviceId=${id}&os=ios&tc=${zs}&tl=10000&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&bc=${wz}&deviceId=${id}&os=ios&tc=${zs}&tl=10000&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -528,7 +528,7 @@ await hlyyzslbpj()
 function hlyyzspj(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.3&bc=${wz}&deviceId=${id}&os=ios&tc=${zs}&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/doTasks?appVersion=1.1.71&bc=${wz}&deviceId=${id}&os=ios&tc=${zs}&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -559,7 +559,7 @@ let url = {
 function hlyyxx(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/task/getUserCoins?av=1.1.3&ut=${ut}`,
+        url : `https://play.gxhuancai.com/hlplay/task/getUserCoins?av=1.1.71&ut=${ut}`,
         headers : JSON.parse(hlyyhd),
 }
       $.get(url, async (err, resp, data) => {
@@ -589,7 +589,7 @@ let url = {
 function hlyyme(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/withdrawal/checkWithDrawal?av=1.1.3&ut=${ut}&wdiCode=${txje}`,
+        url : `https://play.gxhuancai.com/hlplay/withdrawal/checkWithDrawal?av=1.1.71&ut=${ut}&wdiCode=${txje}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
@@ -620,7 +620,7 @@ let url = {
 function hlyytx(timeout = 0) {
   return new Promise((resolve) => {
 let url = {
-        url : `https://play.gxhuancai.com/hlplay/withdrawal/confirmWithDrawalWithWX?av=1.1.3&ut=${ut}&wdiCode=${txje}`,
+        url : `https://play.gxhuancai.com/hlplay/withdrawal/confirmWithDrawalWithWX?av=1.1.71&ut=${ut}&wdiCode=${txje}`,
         headers : JSON.parse(hlyyhd),
 }
       $.post(url, async (err, resp, data) => {
