@@ -548,7 +548,7 @@ async function cloud(){
  return new Promise((resolve) => {
     let cloud_url = {
    		url: `https://bp-api.coohua.com/bubuduo-ryhy/game/cloud/used`,
-        headers: JSON.parse(kxhyheader),
+        headers: JSON.parse(ryhyheader),
         body: "null"
    	}
    $.post(cloud_url,async(error, response, data) =>{
@@ -601,7 +601,7 @@ async function tasklist(){
  return new Promise((resolve) => {
     let tasklist_url = {
    		url: `https://bp-api.coohua.com/bubuduo-ryhy/task/list`,
-        headers: JSON.parse(kxhyheader),
+        headers: JSON.parse(ryhyheader),
        
    	}
    $.get(tasklist_url,async(error, response, data) =>{
