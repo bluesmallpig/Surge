@@ -60,7 +60,7 @@ if (!ryhyheaderArr[0]) {
       await list()
       await plant()
       await cashlist()
-      await tasklist()
+      //await tasklist()
   }
  }
 })()
