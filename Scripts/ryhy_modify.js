@@ -635,6 +635,53 @@ async function tasklist(){
     })
    })
   }
+
+async function getReward(){
+ return new Promise((resolve) => {
+    let getReward_url = {
+   		url: `https://bp-api.coohua.com/bubuduo-ryhy/task/daily/getReward?taskId=${id}`,
+        headers: JSON.parse(ryhyheader),
+        
+   	}
+   $.post(getReward_url,async(error, response, data) =>{
+    try{
+        const result = JSON.parse(data)
+        if(logs)$.log(data)
+        if(result.code == 0)
+          $.log(id+"任务完成\n")
+        else
+          $.log(result.message+"\n")
+        }catch(e) {
+          $.logErr(e, response);
+      } finally {
+        resolve();
+      } 
+    })
+   })
+  }
+async function daily(){
+ return new Promise((resolve) => {
+    let daily_url = {
+   		url: `https://bp-api.coohua.com/bubuduo-ryhy/task/finish/daily?taskId=${id}`,
+        headers: JSON.parse(ryhyheader),
+        
+   	}
+   $.post(daily_url,async(error, response, data) =>{
+    try{
+        const result = JSON.parse(data)
+        if(logs)$.log(data)
+        if(result.code == 0)
+          $.log(id+"领取成功\n")
+        else
+          $.log(result.message+"\n")
+        }catch(e) {
+          $.logErr(e, response);
+      } finally {
+        resolve();
+      } 
+    })
+   })
+  }
 //showmsg
 //boxjs设置tz=1，在12点<=20和23点>=40时间段通知，其余时间打印日志
 
