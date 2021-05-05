@@ -7,6 +7,8 @@ let shouldplan0,shouldplant1,shouldplant2,shouldplan3,ahouldplant4
 let status;
 status = (status = ($.getval("ryhystatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
 ryhyheaderArr = []
+var ryhyadheaderArr = []
+var ryhyadbodyArr = []
 let ryhyheader = $.getdata('ryhyheader')
 let ryhyadheader = $.getdata('ryhyadheader')
 let ryhyadbody = $.getdata('ryhyadbody')
@@ -30,9 +32,13 @@ if (isGetCookie) {
 } 
 
 ryhyheaderArr.push($.getdata('ryhyheader'))
+ryhyadheaderArr.push($.getdata('ryhyadheader'))
+ryhyadbodyArr.push($.getdata('ryhyadbody'))
     let ryhycount = ($.getval('ryhycount') || '1');
   for (let i = 2; i <= ryhycount; i++) {
     ryhyheaderArr.push($.getdata(`ryhyheader${i}`))
+    ryhyadheaderArr.push($.getdata(`ryhyadheader${i}`))
+    ryhyadbodyArr.push($.getdata(`ryhyadbody${i}`))
   }
 !(async () => {
 if (!ryhyheaderArr[0]) {
@@ -44,6 +50,8 @@ if (!ryhyheaderArr[0]) {
     if (ryhyheaderArr[i]) {
       message = ''
       ryhyheader = ryhyheaderArr[i];
+      ryhyadheader = ryhyadheaderArr[i];
+      ryhyadbody = ryhyadbodyArr[i];
       $.index = i + 1;
       console.log(`\n开始【如意花园${$.index}】`)
       await landmsg()
