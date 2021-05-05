@@ -570,7 +570,7 @@ async function cloud(){
 async function cashlist(){
  return new Promise((resolve) => {
     let cashlist_url = {
-   		url: `https://bp-api.coohua.com/bubuduo-ryhy/mall/sign/cash/list`,
+   		url: `https://bp-api.coohua.com/bubuduo-ryhy/game/sign/reward/list`,
         headers: JSON.parse(ryhyadheader),
        
    	}
