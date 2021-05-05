@@ -8,6 +8,8 @@ let status;
 status = (status = ($.getval("ryhystatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
 ryhyheaderArr = []
 let ryhyheader = $.getdata('ryhyheader')
+let ryhyadheader = $.getdata('ryhyadheader')
+let ryhyadbody = $.getdata('ryhyadbody')
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
 const invite=1;//新用户自动邀请，0关闭，1默认开启
 const logs =0;//0为关闭日志，1为开启
@@ -49,6 +51,8 @@ if (!ryhyheaderArr[0]) {
       await room() 
       await list()
       await plant()
+      await cashlist()
+      await tasklist()
   }
  }
 })()
@@ -508,6 +512,121 @@ async function havest(){
     })
    })
   }  
+
+async function lookvideo(){
+ return new Promise((resolve) => {
+    let lookvideo_url = {
+   		url: `https://bp-api.coohua.com/bubuduo-ryhy/ad/lookVideo`,
+        headers: JSON.parse(ryhyadheader),
+        body: ryhyadbody
+   	}
+   $.post(lookvideo_url,async(error, response, data) =>{
+    try{
+        const result = JSON.parse(data)
+        if(logs)$.log(data)
+        if(result.code == 0)
+          $.log("观看成功\n")
+        else
+          $.log(result.message+"\n")
+        }catch(e) {
+          $.logErr(e, response);
+      } finally {
+        resolve();
+      } 
+    })
+   })
+  }  
+async function cloud(){
+ return new Promise((resolve) => {
+    let cloud_url = {
+   		url: `https://bp-api.coohua.com/bubuduo-ryhy/game/cloud/used`,
+        headers: JSON.parse(kxhyheader),
+        body: "null"
+   	}
+   $.post(cloud_url,async(error, response, data) =>{
+    try{
+        const result = JSON.parse(data)
+        if(logs)$.log(data)
+        if(result.code == 0)
+          $.log("加速成功\n")
+        else
+          $.log(result.message+"\n")
+        }catch(e) {
+          $.logErr(e, response);
+      } finally {
+        resolve();
+      } 
+    })
+   })
+  }
+async function cashlist(){
+ return new Promise((resolve) => {
+    let cashlist_url = {
+   		url: `https://bp-api.coohua.com/bubuduo-ryhy/mall/sign/cash/list`,
+        headers: JSON.parse(ryhyadheader),
+       
+   	}
+   $.get(cashlist_url,async(error, response, data) =>{
+    try{
+        const result = JSON.parse(data)
+        if(logs)$.log(data)
+        if(result.code == 0){
+          $.log("今日打卡进度："+result.result.cashLimit.todayVideoNum+"/"+result.result.signVideo+"\n")
+          if(result.result.cashLimit.todayVideoNum < result.result.signVideo){
+         await lookvideo()
+         await cloud()
+}else{
+       $.log("今日打卡完成，不再云加速，需要加速请手动\n")
+}
+        }else
+          $.log(result.message+"\n")
+        }catch(e) {
+          $.logErr(e, response);
+      } finally {
+        resolve();
+      } 
+    })
+   })
+  }
+
+async function tasklist(){
+ return new Promise((resolve) => {
+    let tasklist_url = {
+   		url: `https://bp-api.coohua.com/bubuduo-ryhy/task/list`,
+        headers: JSON.parse(kxhyheader),
+       
+   	}
+   $.get(tasklist_url,async(error, response, data) =>{
+    try{
+        const result = JSON.parse(data)
+        if(logs)$.log(data)
+        if(result.code == 0){
+          let statues = data.match(/"state":\d/g)
+          let statu0 = statues[0].replace(/"state":/,"")
+          let statu1 = statues[1].replace(/"state":/,"")
+          let statu2 = statues[2].replace(/"state":/,"")
+          let statu3 = statues[3].replace(/"state":/,"")
+          if(statu0 == 2 && statu1 == 2 && statu2 == 2 && statu3 == 2){
+             $.log("每日福利已完成\n")
+          }else{
+         let taskid = data.match(/taskId":\d+/g)
+          //$.log(taskid)
+          for(let i = 0; i < taskid.length; i++){
+          id = taskid[i].replace(/taskId":/,"")
+          await getReward()
+          await daily()
+}
+}
+        }else
+          $.log(result.message+"\n")
+        }catch(e) {
+          $.logErr(e, response);
+      } finally {
+        resolve();
+      } 
+    })
+   })
+  }
 //showmsg
 //boxjs设置tz=1，在12点<=20和23点>=40时间段通知，其余时间打印日志
 
